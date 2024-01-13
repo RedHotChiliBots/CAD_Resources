@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CPTemplate>
+  <AppVersion>31</AppVersion>
+  <CPSheet>
+    <MessageBox>Select who modeled this part, then fill in the part number for a RHCB part and select the manufacturing method.
+If this is a modified purchased part select the supplier then fill in the supplier part number.
+If this is an unmodified purchased part fill in everything except "RHCB Assembly Number" and "Fab Method".</MessageBox>
+    <GroupBox Label="File Details" PropName="Groupbox2" DefaultState="Expanded">
+      <Control Label="Modeled by" PropName="Author" ApplyTo="Global" Type="ComboBox" ReadOnly="False" UserDefineable="True">
+        <Data Path="D:\RHCB\CAD\CAD_Resources\Custom Properties\User_List.txt" SourceType="Text" />
+      </Control>
+      <Control Label="RHCB Part Number" PropName="PartNo" ApplyTo="Global" Type="TextBox" ReadOnly="False" DefaultValue="" Mode="Text" />
+      <Control Label="Fab Method" PropName="Fab Method" ApplyTo="Global" Type="ComboBox" ReadOnly="False" UserDefineable="True">
+        <Data Path="D:\RHCB\CAD\CAD_Resources\Custom Properties\Fab_Method.txt" SourceType="Text" />
+      </Control>
+      <Control Label="Finish" PropName="Finish" ApplyTo="Global" Type="ComboBox" ReadOnly="False" UserDefineable="True">
+        <Data Path="D:\RHCB\CAD\CAD_Resources\Custom Properties\Finish_List.txt" SourceType="Text" />
+      </Control>
+      <Control Label="Purchased" PropName="MakeOrBuy" ApplyTo="Global" Type="CheckBox" ReadOnly="False" DefaultValue="0" PropValueChecked="Purchased" PropValueUnchecked="Made">
+        <ChildControl PropName="Vendor" Visibility="IsChecked=true" />
+        <ChildControl PropName="VendorNo" Visibility="IsChecked=true" />
+      </Control>
+      <Control Label="Supplier" PropName="Vendor" ApplyTo="Global" Type="ComboBox" ReadOnly="False" UserDefineable="True">
+        <Data Path="D:\RHCB\CAD\CAD_Resources\Custom Properties\Supplier_List.txt" SourceType="Text" />
+      </Control>
+      <Control Label="Supplier Part Number" PropName="VendorNo" ApplyTo="Global" Type="TextBox" ReadOnly="False" DefaultValue="" Mode="Text" />
+    </GroupBox>
+  </CPSheet>
+</CPTemplate>
