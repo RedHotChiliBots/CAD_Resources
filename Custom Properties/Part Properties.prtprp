@@ -7,7 +7,16 @@ If this is a modified purchased part select the supplier then fill in the suppli
 If this is an unmodified purchased part fill in everything except "RHCB Assembly Number" and "Fab Method".</MessageBox>
     <GroupBox Label="File Details" PropName="Groupbox2" DefaultState="Expanded">
       <Control Label="Modeled by" PropName="Author" ApplyTo="Global" Type="ComboBox" ReadOnly="False" UserDefineable="True">
-        <Data Path="D:\RHCB\CAD\CAD_Resources\Custom Properties\User_List.txt" SourceType="Text" />
+        <Data Path="" SourceType="List">
+          <Item>C.Collins</Item>
+          <Item>C.Grigg</Item>
+          <Item>M.Seifert</Item>
+          <Item>S.Seifert</Item>
+          <Item>A.Sukockey</Item>
+          <Item>C.Tilley</Item>
+          <Item>M.Willson</Item>
+          <Item>The Real G</Item>
+        </Data>
       </Control>
       <Control Label="RHCB Part Number" PropName="PartNo" ApplyTo="Global" Type="TextBox" ReadOnly="False" DefaultValue="" Mode="Text" />
       <Control Label="Fab Method" PropName="Fab Method" ApplyTo="Global" Type="ComboBox" ReadOnly="False" UserDefineable="True">
