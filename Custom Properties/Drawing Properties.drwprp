@@ -5,12 +5,27 @@
     <MessageBox>Select who created this drawing, select who approved this drawing once it is finished and appoved, then select the date that it was released to production.</MessageBox>
     <GroupBox Label="Release properties" PropName="Groupbox2" DefaultState="Expanded">
       <Control Label="Drawn by" PropName="Drawn by" ApplyTo="Global" Type="ComboBox" ReadOnly="False" UserDefineable="True">
-        <Data Path="D:\RHCB\CAD\CAD_Resources\Custom Properties\User_List.txt" SourceType="Text" />
+        <Data Path="" SourceType="List">
+          <Item>C.Collins</Item>
+          <Item>C.Grigg</Item>
+          <Item>A.Kieslling</Item>
+          <Item>L.Newbre</Item>
+          <Item>M.Seifert</Item>
+          <Item>S.Seifert</Item>
+          <Item>A.Sukockey</Item>
+          <Item>C.Tilley</Item>
+          <Item>C.Weaver</Item>
+          <Item>M.Willson</Item>
+        </Data>
       </Control>
       <Control Label="Approved by" PropName="Approved by" ApplyTo="Config" Type="ComboBox" ReadOnly="False" UserDefineable="False">
-        <Data Path="D:\RHCB\CAD\CAD_Resources\Custom Properties\Admin_List.txt" SourceType="Text" />
+        <Data Path="" SourceType="List">
+          <Item>M.Seifert</Item>
+          <Item>S.Seifert</Item>
+        </Data>
       </Control>
       <Control Label="Release date" PropName="Release date" ApplyTo="Config" Type="TextBox" ReadOnly="False" DefaultValue="" Mode="Date" />
+      <Control Label="Revision" PropName="Revision" ApplyTo="Config" Type="TextBox" ReadOnly="False" DefaultValue="A" Mode="Text" />
     </GroupBox>
   </CPSheet>
 </CPTemplate>
