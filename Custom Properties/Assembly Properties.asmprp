@@ -49,7 +49,7 @@ If this is an unmodified purchased assembly fill in everything except "RHCB Asse
           <Item>Zoro</Item>
         </Data>
       </Control>
-      <Control Label="Supplier Part Number" PropName="VendorNo" ApplyTo="Global" Type="TextBox" ReadOnly="False" DefaultValue="~" Mode="Text" />
+      <Control Label="Supplier Part Number" PropName="VendorNo" ApplyTo="Config" Type="TextBox" ReadOnly="False" DefaultValue="~" Mode="Text" />
     </GroupBox>
   </CPSheet>
 </CPTemplate>
