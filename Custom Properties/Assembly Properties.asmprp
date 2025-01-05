@@ -2,9 +2,9 @@
 <CPTemplate>
   <AppVersion>31</AppVersion>
   <CPSheet>
-    <MessageBox>Fill in the part number for a RHCB part and select the manufacturing method.
-If this is a modified purchased assembly check "Purchased" then select the supplier and fill in the part number.
-If this is an unmodified purchased assembly fill in everything except "RHCB Assembly Number" and "Fab Method".</MessageBox>
+    <MessageBox>Fill in the part description and select the manufacturing method.
+If this is a modified purchased assembly check "Purchased" then select the supplier then fill in the supplier part number.
+If this is an unmodified purchased assembly fill in everything except "Fab Method".</MessageBox>
     <GroupBox Label="File Details" PropName="Groupbox2" DefaultState="Expanded">
       <Control Label="Modeled by" PropName="Author" ApplyTo="Global" Type="ComboBox" ReadOnly="False" UserDefineable="True">
         <Data Path="" SourceType="List">
@@ -20,7 +20,20 @@ If this is an unmodified purchased assembly fill in everything except "RHCB Asse
           <Item>M.Willson</Item>
         </Data>
       </Control>
-      <Control Label="RHCB Assembly Number" PropName="PartNo" ApplyTo="Config" Type="TextBox" ReadOnly="False" DefaultValue="~" Mode="Text" />
+      <Control Label="Description" PropName="Description" ApplyTo="Config" Type="TextBox" ReadOnly="False" DefaultValue="~" Mode="Text" />
+      <Control Label="Finish" PropName="Finish" ApplyTo="Config" Type="ComboBox" ReadOnly="False" UserDefineable="False">
+        <Data Path="" SourceType="List">
+          <Item>None</Item>
+          <Item>Brushed</Item>
+          <Item>Powder Coat - Satin Black - Eastwood</Item>
+          <Item>Powder Coat - Metallic Red - Eastwood</Item>
+          <Item>Powder Coat - Medium Green - Eastwood</Item>
+          <Item>Spray Paint - Black</Item>
+          <Item>Spray Paint - Red</Item>
+          <Item>Spray Paint - Green</Item>
+          <Item>Polish</Item>
+        </Data>
+      </Control>
       <Control Label="Purchased" PropName="MakeOrBuy" ApplyTo="Global" Type="CheckBox" ReadOnly="False" DefaultValue="0" PropValueChecked="Purchased" PropValueUnchecked="Made">
         <ChildControl PropName="Vendor" Visibility="IsChecked=true" />
         <ChildControl PropName="VendorNo" Visibility="IsChecked=true" />
@@ -32,7 +45,7 @@ If this is an unmodified purchased assembly fill in everything except "RHCB Asse
           <Item>Armabot</Item>
           <Item>Bimba</Item>
           <Item>CKD</Item>
-          <Item>Cross the Road Electronics</Item>
+          <Item>CTRE</Item>
           <Item>EMI</Item>
           <Item>Festo</Item>
           <Item>Hitec</Item>
@@ -44,12 +57,12 @@ If this is an unmodified purchased assembly fill in everything except "RHCB Asse
           <Item>Rev Robotics</Item>
           <Item>Sharp</Item>
           <Item>SMC</Item>
-          <Item>Swerve Drive Specialties</Item>
+          <Item>SDS</Item>
           <Item>Vex Robotics</Item>
           <Item>Zoro</Item>
         </Data>
       </Control>
-      <Control Label="Supplier Part Number" PropName="VendorNo" ApplyTo="Config" Type="TextBox" ReadOnly="False" DefaultValue="~" Mode="Text" />
+      <Control Label="Supplier Number" PropName="VendorNo" ApplyTo="Config" Type="TextBox" ReadOnly="False" DefaultValue="~" Mode="Text" />
     </GroupBox>
   </CPSheet>
 </CPTemplate>

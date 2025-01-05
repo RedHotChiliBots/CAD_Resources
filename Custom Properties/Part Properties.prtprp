@@ -2,9 +2,9 @@
 <CPTemplate>
   <AppVersion>31</AppVersion>
   <CPSheet>
-    <MessageBox>Select who modeled this part, then fill in the part number for a RHCB part and select the manufacturing method.
+    <MessageBox>Select who modeled this part, then fill in the part description and select the manufacturing method.
 If this is a modified purchased part select the supplier then fill in the supplier part number.
-If this is an unmodified purchased part fill in everything except "RHCB Assembly Number" and "Fab Method".</MessageBox>
+If this is an unmodified purchased part fill in everything except "Fab Method".</MessageBox>
     <GroupBox Label="File Details" PropName="Groupbox2" DefaultState="Expanded">
       <Control Label="Modeled by" PropName="Author" ApplyTo="Global" Type="ComboBox" ReadOnly="False" UserDefineable="True">
         <Data Path="" SourceType="List">
@@ -20,7 +20,7 @@ If this is an unmodified purchased part fill in everything except "RHCB Assembly
           <Item>M.Willson</Item>
         </Data>
       </Control>
-      <Control Label="RHCB Part Number" PropName="PartNo" ApplyTo="Config" Type="TextBox" ReadOnly="False" DefaultValue="~" Mode="Text" />
+      <Control Label="Description" PropName="Description" ApplyTo="Config" Type="TextBox" ReadOnly="False" DefaultValue="~" Mode="Text" />
       <Control Label="Fab Method" PropName="Fab Method" ApplyTo="Global" Type="ComboBox" ReadOnly="False" UserDefineable="True">
         <Data Path="" SourceType="List">
           <Item>CNC Router</Item>
@@ -71,7 +71,7 @@ If this is an unmodified purchased part fill in everything except "RHCB Assembly
           <Item>Zoro</Item>
         </Data>
       </Control>
-      <Control Label="Supplier Part Number" PropName="VendorNo" ApplyTo="Config" Type="TextBox" ReadOnly="False" DefaultValue="~" Mode="Text" />
+      <Control Label="Supplier Number" PropName="VendorNo" ApplyTo="Config" Type="TextBox" ReadOnly="False" DefaultValue="~" Mode="Text" />
     </GroupBox>
   </CPSheet>
 </CPTemplate>

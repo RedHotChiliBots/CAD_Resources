@@ -2,7 +2,9 @@
 <CPTemplate>
   <AppVersion>31</AppVersion>
   <CPSheet>
-    <MessageBox>Select who created this drawing, select who approved this drawing once it is finished and appoved, then select the date that it was released to production.</MessageBox>
+    <MessageBox>Select who created this drawing, select who approved this drawing once it is finished and appoved, then select the date that it was released to production.
+
+When a revision is made add a new line to the revision table, briefly describe the changes in the "DESCRIPTION" field, add your initials to the "USER" field, then add the date that the revision was released.</MessageBox>
     <GroupBox Label="Release properties" PropName="Groupbox2" DefaultState="Expanded">
       <Control Label="Drawn by" PropName="Drawn by" ApplyTo="Global" Type="ComboBox" ReadOnly="False" UserDefineable="True">
         <Data Path="" SourceType="List">

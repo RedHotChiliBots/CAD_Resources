@@ -1,5 +1,7 @@
 CNC Router
 CNC Plasma
+CNC Mill
+CNC Lathe
 3D Printer
 Manual Fab
 Purchased
