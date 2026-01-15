@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CPTemplate>
+  <AppVersion>33</AppVersion>
+  <CPSheet>
+    <MessageBox>Fill in the number of teeth, the diametral pitch and select a pressure angle. Click "Apply" then rebuild the document.
+
+Select who modeled this part, then fill in the part description and select the manufacturing method.
+If this is a modified purchased part select the supplier then fill in the supplier part number.
+If this is an unmodified purchased part fill in everything except "Fab Method".
+Press "Apply" when done.</MessageBox>
+    <GroupBox Label="Gear Dimensions" PropName="Groupbox13" DefaultState="Expanded">
+      <Control Label="Number of Teeth" PropName="N0" ApplyTo="Global" Type="NumericCtrl" ReadOnly="False" DefaultValue="64" />
+      <Control Label="Mod" PropName="P0" ApplyTo="Global" Type="NumericCtrl" ReadOnly="False" DefaultValue="1" />
+      <Control Label="Pressure Angle" PropName="phi0" ApplyTo="Global" Type="RadioButton" ReadOnly="False">
+        <Data>
+          <Item Label="20" PropValue="20" />
+          <Item Label="14.5" PropValue="14.5" />
+        </Data>
+      </Control>
+    </GroupBox>
+    <GroupBox Label="File Details" PropName="Groupbox2" DefaultState="Expanded">
+      <Control Label="Modeled by" PropName="Author" ApplyTo="Global" Type="ComboBox" ReadOnly="False" UserDefineable="True">
+        <Data Path="" SourceType="List">
+          <Item>C.Collins</Item>
+          <Item>C.Grigg</Item>
+          <Item>A.Kieslling</Item>
+          <Item>L.Newbre</Item>
+          <Item>M.Seifert</Item>
+          <Item>S.Seifert</Item>
+          <Item>A.Suhocki</Item>
+          <Item>C.Tilley</Item>
+          <Item>C.Weaver</Item>
+          <Item>M.Willson</Item>
+        </Data>
+      </Control>
+      <Control Label="Description" PropName="Description" ApplyTo="Config" Type="TextBox" ReadOnly="False" DefaultValue="~" Mode="Text" />
+      <Control Label="Fab Method" PropName="Fab Method" ApplyTo="Global" Type="ComboBox" ReadOnly="False" UserDefineable="True">
+        <Data Path="" SourceType="List">
+          <Item>CNC Router</Item>
+          <Item>CNC Plasma</Item>
+          <Item>3D Printer</Item>
+          <Item>Manual Fab</Item>
+          <Item>Purchased</Item>
+        </Data>
+      </Control>
+      <Control Label="Finish" PropName="Finish" ApplyTo="Config" Type="ComboBox" ReadOnly="False" UserDefineable="True">
+        <Data Path="" SourceType="List">
+          <Item>None</Item>
+          <Item>Brushed</Item>
+          <Item>Powder Coat - Satin Black - Eastwood</Item>
+          <Item>Powder Coat - Metallic Red - Eastwood</Item>
+          <Item>Powder Coat - Medium Green - Eastwood</Item>
+          <Item>Spray Paint - Black</Item>
+          <Item>Spray Paint - Red</Item>
+          <Item>Spray Paint - Green</Item>
+          <Item>Polish</Item>
+        </Data>
+      </Control>
+      <Control Label="Purchased" PropName="MakeOrBuy" ApplyTo="Global" Type="CheckBox" ReadOnly="False" DefaultValue="0" PropValueChecked="Purchased" PropValueUnchecked="Made">
+        <ChildControl PropName="Vendor" Visibility="IsChecked=true" />
+        <ChildControl PropName="VendorNo" Visibility="IsChecked=true" />
+      </Control>
+      <Control Label="Supplier" PropName="Vendor" ApplyTo="Global" Type="ComboBox" ReadOnly="False" UserDefineable="True">
+        <Data Path="" SourceType="List">
+          <Item>Allen Bradley</Item>
+          <Item>Andymark</Item>
+          <Item>Armabot</Item>
+          <Item>Bimba</Item>
+          <Item>CKD</Item>
+          <Item>CTRE</Item>
+          <Item>EMI</Item>
+          <Item>Festo</Item>
+          <Item>Hitec</Item>
+          <Item>Igus</Item>
+          <Item>Limelight</Item>
+          <Item>McMaster-Carr</Item>
+          <Item>Netgear</Item>
+          <Item>Pixy Cam</Item>
+          <Item>Rev Robotics</Item>
+          <Item>Sharp</Item>
+          <Item>SMC</Item>
+          <Item>SDS</Item>
+          <Item>Vex Robotics</Item>
+          <Item>Zoro</Item>
+        </Data>
+      </Control>
+      <Control Label="Supplier Number" PropName="VendorNo" ApplyTo="Config" Type="TextBox" ReadOnly="False" DefaultValue="~" Mode="Text" />
+    </GroupBox>
+  </CPSheet>
+</CPTemplate>
