@@ -8,7 +8,7 @@ Select who modeled this part, then fill in the part description and select the m
 If this is a modified purchased part select the supplier then fill in the supplier part number.
 If this is an unmodified purchased part fill in everything except "Fab Method".
 Press "Apply" when done.</MessageBox>
-    <GroupBox Label="Gear Dimensions" PropName="Groupbox13" DefaultState="Expanded">
+    <GroupBox Label="Pulley Dimensions" PropName="Groupbox13" DefaultState="Expanded">
       <Control Label="Number of Teeth" PropName="N0" ApplyTo="Config" Type="NumericCtrl" ReadOnly="False" DefaultValue="64" />
       <Control Label="Belt Type" PropName="B" ApplyTo="Config" Type="RadioButton" ReadOnly="False">
         <Data>
@@ -18,6 +18,7 @@ Press "Apply" when done.</MessageBox>
           <Item Label="GT" PropValue="2">
             <ChildControl PropName="Gp" Visibility="IsChecked=true" />
           </Item>
+          <Item Label="RT25" PropValue="3" />
         </Data>
       </Control>
       <Control Label="Pitch" PropName="Hp" ApplyTo="Config" Type="RadioButton" ReadOnly="False">
