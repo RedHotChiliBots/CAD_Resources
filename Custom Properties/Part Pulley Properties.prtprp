@@ -18,7 +18,9 @@ Press "Apply" when done.</MessageBox>
           <Item Label="GT" PropValue="2">
             <ChildControl PropName="Gp" Visibility="IsChecked=true" />
           </Item>
-          <Item Label="RT25" PropValue="3" />
+          <Item Label="RT" PropValue="3">
+            <ChildControl PropName="Rp" Visibility="IsChecked=true" />
+          </Item>
         </Data>
       </Control>
       <Control Label="Pitch" PropName="Hp" ApplyTo="Config" Type="RadioButton" ReadOnly="False">
@@ -34,6 +36,7 @@ Press "Apply" when done.</MessageBox>
           <Item Label="GT3" PropValue="3" />
         </Data>
       </Control>
+      <Control Label="Pitch" PropName="Rp" ApplyTo="Config" Type="TextBox" ReadOnly="True" DefaultValue="25" Mode="Text" />
     </GroupBox>
     <GroupBox Label="File Details" PropName="Groupbox2" DefaultState="Expanded">
       <Control Label="Modeled by" PropName="Author" ApplyTo="Global" Type="ComboBox" ReadOnly="False" UserDefineable="True">
